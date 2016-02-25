@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Localizer.js Test Unit</title>
+	<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-1.22.0.css">
+	<script>
+		var localizerDictionary = {
+			"pt-br": {
+				"bird": "Pássaro",
+				"cat": "Gato",
+				"dog": "Cachorro",
+				"fish": "Peixe"
+			},
+			"en": {
+				"bird": "Bird",
+				"cat": "Cat",
+				"dog": "Dog",
+				"fish": "Fish",
+				"lion": "Lion"
+			},
+			"de": {
+				"bird": "Vogel",
+				"cat": "Katze",
+				"dog": "Hund",
+				"elephant": "Elefant",
+				"fish": "Fische",
+				"lion": "Löwe"
+			}
+		};
+	</script>
+</head>
+<body>
+	<div id="qunit"></div>
+	<div id="qunit-fixture"></div>
+	<script src="http://code.jquery.com/qunit/qunit-1.22.0.js"></script>
+	<script src="../dist/Localizer.js"></script>
+	<script src="UnitTesting.js"></script>
+</body>
+</html>
