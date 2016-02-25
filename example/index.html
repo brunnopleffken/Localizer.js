@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Localizer.js Test Environment</title>
+
+	<!-- Load all dictionaries first, and then call Localizer.js -->
+	<script src="dictionary.js"></script>
+	<script src="../dist/Localizer.js"></script>
+</head>
+<body>
+
+	<p>This is <b>cat</b> in Portuguese: ${cat}</p>
+	<p>This is <b>lion</b> in Portuguese: ${lion}</p>
+	<p>This is <b>elephant</b> but the key doesn't exist in 'pt-br', so fallback to 'en': ${elephant}</p>
+	<p>This key doesn't exist at all: ${wolf}</p>
+
+	<script>
+		// Define Localizer() class
+		var Localizer = new LocalizerJS();
+
+		// Define Brazilian Portuguese as main language
+		Localizer.setLanguage("pt-br");
+
+		// Define English as fallback language
+		Localizer.setFallback("en");
+
+		// Translate everything! This MUST be right before </body>
+		Localizer.run();
+	</script>
+</body>
+</html>
